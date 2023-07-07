@@ -1,0 +1,15 @@
+name: webscrapping
+on:
+  workflow_dispatch:
+  schedule:
+    - cron:  '00 19 * * *' # every 19:00
+jobs:
+  scheduled:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout the respository
+      uses: actions/checkout@v3
+    - name: Set up Chrome
+      uses: browser-actions/setup-chrome@latest
+    - name: Set up Python
+      uses: actions/setup-python@v4
