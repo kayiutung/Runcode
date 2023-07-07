@@ -28,7 +28,7 @@ Sale = [39762, 39756]
 Lease = [14068, 14084]
 
 #Sale
-driver = webdriver.Chrome('/content/chromedriver', options = options)
+driver = webdriver.Chrome('/root/bin/chromedriver', options = options)
 url = 'https://hk.centanet.com/findproperty/list/buy'
 driver.get(url)
 sale = driver.find_element_by_xpath('//*[@id="__layout"]/div/div[4]/div[6]/div/div[1]/div[1]/div/h2/span/span').text
@@ -37,7 +37,7 @@ Sale.append(sale)
 driver.quit()
 
 #Lease
-driver = webdriver.Chrome('/content/chromedriver', options = options)
+driver = webdriver.Chrome('/root/bin/chromedriver', options = options)
 url = 'https://hk.centanet.com/findproperty/list/rent'
 driver.get(url)
 lease = driver.find_element_by_xpath('//*[@id="__layout"]/div/div[4]/div[6]/div/div[1]/div[1]/div/h2/span/span').text
