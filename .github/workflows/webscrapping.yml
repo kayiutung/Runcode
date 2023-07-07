@@ -16,14 +16,10 @@ jobs:
         python-version: 3.9
     - name: Download library 
       run: pip install -r requirements.txt
-    - name: Change directory
-      run: cd /home/runner/work
     - name: Download Chromedriver
       run: |
         curl -O https://chromedriver.storage.googleapis.com/$(curl -sS https://chromedriver.storage.googleapis.com/LATEST_RELEASE)/chromedriver_linux64.zip
         unzip chromedriver_linux64.zip
-    - name: Check location
-      run: whereis chromedriver
     - name: Run the Python code
       run: python3 main.py
     - name: auto-push to github
