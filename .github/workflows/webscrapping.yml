@@ -19,8 +19,9 @@ jobs:
     - name: Change directory
       run: cd ~/bin
     - name: Download Chromedriver
-      run: curl -O https://chromedriver.storage.googleapis.com/$(curl -sS https://chromedriver.storage.googleapis.com/LATEST_RELEASE)/chromedriver_linux64.zip
-      run: unzip chromedriver_linux64.zip
+      run: |
+        curl -O https://chromedriver.storage.googleapis.com/$(curl -sS https://chromedriver.storage.googleapis.com/LATEST_RELEASE)/chromedriver_linux64.zip
+        unzip chromedriver_linux64.zip
     - name: Run the Python code
       run: python3 main.py
     - name: auto-push to github
