@@ -27,14 +27,19 @@ options.add_argument('--disable-dev-shm-usage')
 workbook = load_workbook(filename='Centaline_sale_lease.xlsx')
 sheet = workbook.active
 Date = []
-for cell in sheet.iter_cols(min_row=1, max_row=sheet.max_row, min_col=1, max_col=1):
-    Date.append(cell[0])
+for cell in sheet.iter_cols(min_row=2, max_row=sheet.max_row, min_col=1, max_col=1):
+    for elem in cell:
+        Date.append(elem.value)
 Sale = []
-for cell in sheet.iter_cols(min_row=1, max_row=sheet.max_row, min_col=2, max_col=2):
-    Sale.append(cell[0].value)
+for cell in sheet.iter_cols(min_row=2, max_row=sheet.max_row, min_col=2, max_col=2, values_only=True):
+    print(cell)
+    for elem in cell:
+        print(elem)
+        Sale.append(elem)
 Lease = []
-for cell in sheet.iter_cols(min_row=1, max_row=sheet.max_row, min_col=3, max_col=3):
-    Lease.append(cell[0].value)
+for cell in sheet.iter_cols(min_row=2, max_row=sheet.max_row, min_col=3, max_col=3,values_only=True):
+    for elem in cell:
+        Lease.append(elem)
 
 #Sale
 driver = webdriver.Chrome('/usr/bin/chromedriver', options = options)
