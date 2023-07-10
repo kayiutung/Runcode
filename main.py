@@ -29,12 +29,10 @@ sheet = workbook.active
 Date = []
 for cell in sheet.iter_cols(min_row=2, max_row=sheet.max_row, min_col=1, max_col=1):
     for elem in cell:
-        Date.append(elem.value)
+        Date.append(elem.value.date())
 Sale = []
 for cell in sheet.iter_cols(min_row=2, max_row=sheet.max_row, min_col=2, max_col=2, values_only=True):
-    print(cell)
     for elem in cell:
-        print(elem)
         Sale.append(elem)
 Lease = []
 for cell in sheet.iter_cols(min_row=2, max_row=sheet.max_row, min_col=3, max_col=3,values_only=True):
