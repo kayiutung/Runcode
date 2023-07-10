@@ -1,7 +1,7 @@
 name: webscrapping
 on:
   schedule:
-    - cron:  '51 6 * * *' 
+    - cron:  '12 7 * * *' 
 
 jobs:
   scheduled:
