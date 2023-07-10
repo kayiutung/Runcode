@@ -45,7 +45,7 @@ url = 'https://hk.centanet.com/findproperty/list/buy'
 driver.get(url)
 sale = driver.find_element_by_xpath('//*[@id="__layout"]/div/div[4]/div[6]/div/div[1]/div[1]/div/h2/span/span').text
 print(sale.replace(",",""))
-Sale.append(sale.replace(",","").value)
+Sale.append(sale.replace(",","").strip())
 driver.quit()
 
 #Lease
@@ -54,7 +54,7 @@ url = 'https://hk.centanet.com/findproperty/list/rent'
 driver.get(url)
 lease = driver.find_element_by_xpath('//*[@id="__layout"]/div/div[4]/div[6]/div/div[1]/div[1]/div/h2/span/span').text
 print(lease.replace(",",""))
-Lease.append(lease.replace(",","").value)
+Lease.append(lease.replace(",","").strip())
 driver.quit()
 
 #Date
