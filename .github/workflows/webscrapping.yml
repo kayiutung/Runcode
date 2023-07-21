@@ -1,7 +1,8 @@
 name: webscrapping
 on:
+  workflow_dispatch:
   schedule:
-    - cron:  '10 8 * * *' 
+    - cron:  '00 19 * * *' 
 
 jobs:
   scheduled:
