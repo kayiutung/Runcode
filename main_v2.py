@@ -137,7 +137,7 @@ for fp in range(1,6):
 driver.quit()
 
 #Lease
-driver = webdriver.Chrome('/content/chromedriver', options = options)
+driver = webdriver.Chrome('/usr/bin/chromedriver', options = options)
 url = "https://hk.centanet.com/findproperty/list/rent"
 driver.get(url)
 
