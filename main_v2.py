@@ -189,6 +189,8 @@ for fp in range(1,6):
     driver.find_element_by_xpath('/html/body/ul[2]/div[2]/div/label[' + str(fp) + ']/span[1]/span').click()
     time.sleep(3)
 
+driver.quit()
+
 # Add the scrapped data to df and format the datetime
 df_sale.loc[len(df_sale)] = Sale
 df_lease.loc[len(df_lease)] = Lease
