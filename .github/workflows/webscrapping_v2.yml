@@ -2,7 +2,7 @@ name: webscrapping_v2
 on:
   workflow_dispatch:
   schedule:
-    - cron:  '00 3 * * *' 
+    - cron:  '00 19 * * *' 
 
 jobs:
   scheduled:
